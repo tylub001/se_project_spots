@@ -5,9 +5,10 @@
 }
 
 .profile__avatar {
-  width: 190px;
-  height: 190px;
   margin-right: 20px;
+  border-radius: 8px;
+  height: 190px;
+  width: 190px;
 }
 
 .profile__column {
@@ -16,30 +17,124 @@
 }
 
 .profile__edit-btn {
+  opacity: 70%;
   margin-top: auto;
-  width: 107.34px;
-  height: 16px;
-  color: rgba(33, 33, 33, 0.7);
+  color: #212121;
   border: none;
-  background-color: #fcf5e5;
+  background-color: transparent;
+  height: 16px;
+  padding: 0;
+  gap: 8px;
+  margin-right: auto;
+  display: flex;
+  transition: opacity(100%) 0.3s ease;
+  cursor: pointer;
+}
+
+.profile__edit-btn:hover {
+  opacity: 100%;
 }
 
 .profile__name {
   margin: 0 0 12px;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 32px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .profile__description {
   margin: 0;
   color: rgba(33, 33, 33, 0.7);
+  font-size: 16px;
+  line-height: 16px;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .profile__add-btn {
   margin-left: auto;
   border-radius: 8px;
-  padding: 18px 32px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
   background-color: #212121;
-  width: 149px;
-  height: 52px;
   color: #fcf5e5;
   margin-top: auto;
+  padding: 18px 32px;
+  font-size: 16px;
+  line-height: 1;
+  align-items: center;
+  transition: opacity(80%) 0.3s ease;
+  cursor: pointer;
+}
+
+.profile__add-btn:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 288px;
+    padding-top: 20px;
+  }
+
+  .profile__avatar {
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .profile__add-btn {
+    margin: 0;
+    width: 100%;
+  }
+
+  .profile__edit-btn {
+    margin-top: auto;
+    color: rgba(33, 33, 33, 0.7);
+    border: none;
+    background-color: transparent;
+    height: 16px;
+    padding: 0;
+    gap: 8px;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin: 0 0 6px;
+    max-width: 288px;
+  }
+
+  .profile__column {
+    margin: 0 0 20px;
+  }
+
+  .profile__description {
+    margin: 0 0 32px;
+    max-width: 288px;
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .profile__add-btn {
+    padding: 10px 10px;
+  }
 }
