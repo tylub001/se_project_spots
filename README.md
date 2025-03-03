@@ -39,7 +39,7 @@ A text editor (VS Code, Sublime Text, or Atom)
 
 **Figma**
 
-- [Link to the project on Figma](git@github.com:tylub001/se_project_spots.git)
+[git@github.com:tylub001/se_project_spots.git](git@github.com:tylub001/se_project_spots.git)
 
 **Images**
 
