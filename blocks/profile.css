@@ -110,8 +110,8 @@
   }
 
   .profile__edit-btn {
-    padding: 0 20px;
     align-self: center;
+    margin: 0;
   }
 
   .profile__name {

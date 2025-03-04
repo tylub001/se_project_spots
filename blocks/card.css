@@ -25,6 +25,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 350px;
+  margin: 12px 0 0;
 }
 
 .card__like-btn {
@@ -63,7 +64,7 @@
   }
 
   .card__content {
-   max-width: 288px;
+    max-width: 288px;
   }
 
   .card {
