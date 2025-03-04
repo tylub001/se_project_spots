@@ -37,9 +37,11 @@ A text editor (VS Code, Sublime Text, or Atom)
 2. Navigate to the Project Folder
 3. Open index.html in a browser
 
-**Figma**
+##Deployment
 
-[git@github.com:tylub001/se_project_spots.git](git@github.com:tylub001/se_project_spots.git)
+This webpage is deployed to Github Pages
+
+[Deployment Link](https://tylub001.github.io/se_project_spots/)
 
 **Images**
 
