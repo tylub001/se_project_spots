@@ -50,9 +50,18 @@ function getCardElement(data) {
     .cloneNode(true);
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImage = cardElement.querySelector(".card__image");
+  const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+const cardRemoveBtn = cardElement.querySelector(".card__remove-btn");
   cardNameEl.textContent = data.name;
   cardImage.src = data.link;
   cardImage.alt = data.name;
+  cardLikeBtn.addEventListener("click", () => {
+    cardLikeBtn.classList.toggle("card__like-btn_liked")
+    });
+    cardRemoveBtn.addEventListener("click",() => {
+      cardElement.remove();
+    });
+
 
   return cardElement;
 }
@@ -98,6 +107,7 @@ newPostModalCloseBtn.addEventListener("click", () => {
 });
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleNewPostSubmit);
+
 
 initialCards.forEach((card) => {
   const cardElement = getCardElement(card);

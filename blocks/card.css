@@ -14,7 +14,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+
 }
+
 
 .card__title {
   font-size: 20px;
@@ -44,6 +47,40 @@
   opacity: 100%;
 }
 
+.card__like-btn_liked {
+  background-image: url(../images/Union\ \(1\).svg);
+  opacity: 100%;
+  background-repeat: no-repeat;
+
+
+}
+
+.card__like-btn_liked:hover {background-image: url(../images/State=State4.svg);}
+
+.card__remove-btn {
+  background-image: url(../images/remove-default.svg);
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  left: 370px;
+  top:46px;
+  padding:0;
+
+
+
+
+
+}
+
+.card__remove-btn:hover {
+  background-image: url(../images/remove-state-hover.svg);
+  opacity: 100%;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
@@ -70,4 +107,12 @@
   .card {
     max-width: 288px;
   }
+
+  .card__remove-btn {
+    position: relative;
+    left: 245px;
+    top:46px;
+  }
+
 }
+
