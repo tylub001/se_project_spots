@@ -62,7 +62,7 @@
                 id="profile-name-input"
                 type="text"
                 name="name"
-                class="modal__input"
+                class="modal__input modal__input_text-entered"
                 placeholder="Type your name"
               />
             </label>
@@ -72,11 +72,11 @@
                 id="profile-description-input"
                 type="text"
                 name="description"
-                class="modal__input"
+                class="modal__input modal__input_text-entered"
                 placeholder="Describe yourself"
               />
             </label>
-            <button type="submit" class="modal__submit-btn">Submit</button>
+            <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
@@ -91,7 +91,7 @@
                 id="add-card-link-input"
                 name="link"
                 type="url"
-                class="modal__input"
+                class="modal__input modal__input_text-entered"
                 placeholder="Paste a link to the picture"
               />
             </label>
@@ -101,18 +101,18 @@
                 id="add-card-name-input"
                 name="name"
                 type="text"
-                class="modal__input"
+                class="modal__input modal__input_text-entered"
                 placeholder="Type your caption"
               />
             </label>
-            <button type="submit" class="modal__submit-btn">Submit</button>
+            <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
       <div class="modal" id="preview-modal">
         <div class="modal__container modal__container_type_preview">
           <button
-            label="Close modal"
+            aria-label="Close modal"
             class="modal__close-btn modal__close-btn_type_preview"
             type="button"
           ></button>

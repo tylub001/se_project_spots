@@ -1,5 +1,5 @@
 const initialCards = [
-{
+  {
     name: "Tunnel with morning light",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
   },
@@ -48,6 +48,9 @@ const previewModalImage = previewModal.querySelector(".modal__image");
 const previewModalCaption = previewModal.querySelector(".modal__caption");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 
+const editModalSubmitBtn = editModal.querySelector(".modal__submit-btn");
+const newPostModalSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -70,15 +73,22 @@ function getCardElement(data) {
   cardImage.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImage.src = data.link;
-  previewModalCaption.alt = data.name;
-  previewModalCaption.textContent = data.name;
-
-});
+    previewModalImage.alt = data.name;
+    previewModalCaption.textContent = data.name;
+  });
 
   return cardElement;
 }
 
 function openModal(modal) {
+  if (modal === editModal) {
+    editModalNameInput.value = "";
+    editModalDescriptionInput.value = "";
+  }
+  if (modal === newPostModal) {
+    cardNameInput.value = "";
+    cardLinkInput.value = "";
+  }
   modal.classList.add("modal_opened");
 }
 
@@ -91,7 +101,6 @@ function handleEditFormSubmit(evt) {
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editModal);
-  closeModal();
 }
 
 function handleNewPostSubmit(evt) {
@@ -110,17 +119,6 @@ profileEditBtn.addEventListener("click", () => {
 profileNewPostBtn.addEventListener("click", () => {
   openModal(newPostModal);
 });
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
-
-newPostModalCloseBtn.addEventListener("click", () => {
-  closeModal(newPostModal);
-});
-
-previewModalCloseBtn.addEventListener("click", () => {
-closeModal(previewModal);
-});
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleNewPostSubmit);
@@ -129,3 +127,10 @@ initialCards.forEach((card) => {
   const cardElement = getCardElement(card);
   cardsList.prepend(cardElement);
 });
+
+const closeBtns = document.querySelectorAll(".modal__close-btn");
+closeBtns.forEach((btn) => {
+  const popup = btn.closest(".modal");
+  btn.addEventListener("click", () => closeModal(popup));
+});
+
