@@ -75,7 +75,7 @@
   z-index: 1;
   position: absolute;
   top: 0;
-  right: -50px;
+  right: -52.5px;
 }
 
 .modal__close-btn_type_preview:hover {
@@ -182,7 +182,7 @@
 
   .modal__close-btn_type_preview {
     top: -40px;
-    right: 16px;
+    right: 6px;
   }
 
   .modal__container_type_preview {
