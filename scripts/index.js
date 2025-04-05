@@ -80,15 +80,6 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function handleKeydown(evt) {
-  if (evt.key === "Escape") {
-    const openedModal = document.querySelector(".modal_opened");
-    if (openedModal) {
-      closeModal(openedModal);
-    }
-  }
-}
-
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleKeydown);
@@ -103,27 +94,17 @@ function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  editModalNameInput.value = "";
-  editModalDescriptionInput.value = "";
-  resetValidation(
-    editFormElement,
-    [editModalNameInput, editModalDescriptionInput],
-    settings
-  );
-  disableButton(editModalSubmitBtn);
   closeModal(editModal);
+
 }
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
-  cardNameInput.value = "";
-  cardLinkInput.value = "";
-  resetValidation(cardFormElement, [cardNameInput, cardLinkInput], settings);
+  renderCard(inputValues);
   disableButton(newPostModalSubmitBtn);
   closeModal(newPostModal);
+  evt.target.reset()
 }
 
 profileEditBtn.addEventListener("click", () => {
@@ -143,8 +124,7 @@ editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleNewPostSubmit);
 
 initialCards.forEach((card) => {
-  const cardElement = getCardElement(card);
-  cardsList.prepend(cardElement);
+  renderCard(card);
 });
 
 const closeBtns = document.querySelectorAll(".modal__close-btn");
@@ -163,3 +143,16 @@ modals.forEach((modal) => {
   });
 });
 
+function handleKeydown(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
+function renderCard(data, method = "prepend") {
+  const cardElement = getCardElement(data);
+  cardsList[method](cardElement);
+}
