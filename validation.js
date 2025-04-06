@@ -3,7 +3,7 @@ const settings = {
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
   inputErrorClass: "modal__input_type_error",
-  errorSelector: ".modal__error"
+  errorSelector: ".modal__error",
 };
 
 const showInputError = (formEl, inputEl, errorMsg, config) => {
@@ -72,4 +72,3 @@ const enableValidation = (config) => {
 };
 
 enableValidation(settings);
-

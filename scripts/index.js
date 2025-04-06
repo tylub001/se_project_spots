@@ -95,7 +95,6 @@ function handleEditFormSubmit(evt) {
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editModal);
-
 }
 
 function handleNewPostSubmit(evt) {
@@ -104,7 +103,7 @@ function handleNewPostSubmit(evt) {
   renderCard(inputValues);
   disableButton(newPostModalSubmitBtn);
   closeModal(newPostModal);
-  evt.target.reset()
+  evt.target.reset();
 }
 
 profileEditBtn.addEventListener("click", () => {
