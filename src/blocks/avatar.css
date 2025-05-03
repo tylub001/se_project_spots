@@ -1,0 +1,136 @@
+.modal__avatar-container {
+  background: #fff;
+  padding: 36px 50px;
+  max-width: 730px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.avatar {
+  color: #212121b2;
+}
+
+.avatar-modal__title {
+  margin: 0 0 36px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.avatar-modal__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+.profile__avatar-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+#avatar-modal .modal__submit-btn {
+  opacity: 1
+}
+
+.profile__avatar-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  visibility: hidden;
+  border: none;
+  opacity: 0;
+  right: 10px;
+}
+
+.profile__avatar-container:hover .profile__avatar-btn {
+  visibility: visible;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.profile__pencil-icon {
+  margin: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.profile__avatar-btn:hover .profile__pencil-icon {
+  opacity: 1;
+}
+
+.profile__avatar-btn::after {
+  content: "Edit Avatar";
+  color: #fff;
+  margin-bottom: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.profile__avatar-btn:hover::after {
+  opacity: 1;
+}
+
+#avatar-modal .modal__close-btn {
+  right: 40px;
+  top: 30px;
+}
+
+@media screen and (max-width: 627px) {
+  .modal__avatar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align items to the left */
+    text-align: left;
+    padding: 12px;
+    align-items: stretch;
+  }
+
+  .avatar-modal__title {
+    margin-bottom: 12px;
+  }
+
+  .avatar-modal__label {
+    margin-bottom: 12px;
+  }
+
+  #avatar-modal .modal__close-btn {
+    padding: 0;
+    right: 6px;
+    top: 6px;
+  }
+
+  .profile__avatar-btn {
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+  }
+
+  .profile__avatar-btn::after {
+    content: "";
+  }
+
+  .profile__pencil-icon {
+    background-color: #21212199;
+    border-radius: 6px;
+    width: 23px;
+    height: 23px;
+    padding: 4px;
+    gap: 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    opacity: 1;
+  }
+
+
+}
