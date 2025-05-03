@@ -52,7 +52,7 @@ A text editor (VS Code, Sublime Text, or Atom)
 
 ##Deployment
 
-This webpage is deployed to Github Pages
+This webpage is deployed to Github Pages:
 
 [Deployment Link](https://tylub001.github.io/se_project_spots/)
 
@@ -63,6 +63,8 @@ This webpage is deployed to Github Pages
 ![Images](./readme-images/880px.png)
 ![Images](./readme-images/680px.png)
 
-
+##Loom Video:
 [Google Drive Loom Video Link](https://drive.google.com/file/d/1ZQPn5MAfBkoXSNuMt-zQB2kWDy94soEQ/view?usp=sharing)
+
+##Youtube Project Demo Video:
 [YouTube Project Demo Link](https://youtu.be/H2du7H3zJcs)
