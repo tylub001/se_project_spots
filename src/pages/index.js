@@ -46,10 +46,10 @@ const api = new Api({
 api
   .getAppInfo()
   .then(([cards, userInfo]) => {
-    document.querySelector(".profile__name").textContent = userInfo.name;
-    document.querySelector(".profile__description").textContent =
+    profileName.textContent = userInfo.name;
+    profileDescription.textContent =
       userInfo.about;
-    document.querySelector(".profile__avatar").src = userInfo.avatar;
+    profileAvatar.src = userInfo.avatar;
     cards.forEach((item) => {
       renderCard(item);
     });

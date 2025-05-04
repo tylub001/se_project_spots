@@ -32,10 +32,6 @@
   margin-right: 20px;
 }
 
-#avatar-modal .modal__submit-btn {
-  opacity: 1
-}
-
 .profile__avatar-btn {
   position: absolute;
   width: 100%;
@@ -88,8 +84,8 @@
   .modal__avatar-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the left */
-    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: left;
     padding: 12px;
     align-items: stretch;
