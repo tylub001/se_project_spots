@@ -1,0 +1,124 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  padding: 0 20px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out,
+    visibility 0.3s;
+}
+.modal_opened {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal__delete-container {
+  background: #fff;
+  padding: 32px 50px;
+  max-width: 730px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.modal__delete-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.delete__close-btn {
+  position: absolute;
+  background-image: url(../images/delete-close-btn.svg);
+  top: -12px;
+  right: -52px;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.delete__close-btn:hover {
+ opacity: 0.5;
+}
+
+.modal__delete-title {
+  margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.modal__delete-btn {
+  width: 156px;
+  padding: 18px 32px;
+  border-radius: 8px;
+  background-color: #ff6565;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.modal__delete-btn:hover {
+  background-color: #ff3333;
+  color: #212121;
+}
+
+.modal__cancel-btn {
+  width: 156px;
+  padding: 18px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.modal__cancel-btn:hover {
+  background-color: #212121;
+  color: #fff;
+}
+
+.modal__submit-btn:disabled {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 627px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .modal__container {
+    padding: 12px;
+  }
+
+  .modal__delete-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .modal__delete-title {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  .delete__close-btn {
+    top: -56px;
+    right: 0;
+  }
+}
