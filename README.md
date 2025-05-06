@@ -34,6 +34,7 @@ Spots now incorporates JavaScript for improved functionality:
 
 - API Integration: The project now communicates with an API, allowing persistent updates—ensuring that profile changes, including images and text edits, stay saved across refreshes.
 
+
 ## Deployment & System Requirements
 
 System Requirements
@@ -51,7 +52,7 @@ A text editor (VS Code, Sublime Text, or Atom)
 
 ##Deployment
 
-This webpage is deployed to Github Pages
+This webpage is deployed to Github Pages:
 
 [Deployment Link](https://tylub001.github.io/se_project_spots/)
 
@@ -62,7 +63,11 @@ This webpage is deployed to Github Pages
 ![Images](./readme-images/880px.png)
 ![Images](./readme-images/680px.png)
 
-
+Loom Video:
 [Google Drive Loom Video Link](https://drive.google.com/file/d/1ZQPn5MAfBkoXSNuMt-zQB2kWDy94soEQ/view?usp=sharing)
+
+
+
+Youtube Project Demo Video:
 
 [YouTube Project Demo Link](https://youtu.be/H2du7H3zJcs)
